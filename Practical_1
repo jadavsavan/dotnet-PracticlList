@@ -1,0 +1,36 @@
+File Name
+Program.cs
+------------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enater the number : \n");
+            int A = int.Parse(Console.ReadLine());
+            int sum = 0;
+            while (A > 0)
+            {
+                int s = A % 10;
+                A /= 10;
+                sum += s;
+            }
+            Console.Write("Ans : "+sum);
+            Console.ReadLine();
+         }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------
+output
+-------------------------------------------------------------------------------------------------------------------------------------------
+Enater the number :
+123
+Ans : 6
+-------------------------------------------------------------------------------------------------------------------------------------------
