@@ -1,0 +1,57 @@
+Practical_2
+-------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter The Weight [kg] :");
+            float weight =float.Parse( Console.ReadLine());
+           
+            Console.Write("Enter The Distance [km] :");
+            float Distance = float.Parse(Console.ReadLine());
+          
+            if (Distance <= 100)
+            {
+                Console.Write("Service charges of goods to trnsfer from source to destinition " + weight * 50 + " Rs");
+              
+            }
+            else if (Distance > 100 && Distance <= 200)
+            {
+
+                Console.Write("Service charges of goods to trnsfer from source to destinition " + weight * 65 + " Rs");
+                
+            }
+            else if (Distance > 200 && Distance <= 300)
+            {
+                Console.Write("Service charges of goods to trnsfer from source to destinition " + weight * 90 + " Rs");
+               
+
+            }
+            else if (300 < Distance)
+            {
+                Console.Write("Service charges of goods to trnsfer from source to destinition " + weight * 120 + " Rs");
+
+            }
+            else
+            {
+                Console.Write("Enter Wrong Input");
+            }
+        Console.Read();
+        }
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+Output
+Enter The Weight [kg] :123.10
+Enter The Distance [km] :222.21
+Service charges of goods to trnsfer from source to destinition 11079 Rs
+------------------------------------------------------------------------------------------------------------------------------
