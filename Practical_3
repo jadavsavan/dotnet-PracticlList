@@ -1,0 +1,103 @@
+Prctical_3
+---------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter The Student Name |");
+            String Name = Console.ReadLine();
+           
+            Console.Write("Enter The Student RollNo |");
+            int roll = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter The Student marks of subject 1 |");
+            float s1 = float.Parse(Console.ReadLine());
+
+            Console.Write("Enter The Student marks of subject 2 |");
+            float s2 = float.Parse(Console.ReadLine());
+
+            Console.Write("Enter The Student marks of subject 3 |");
+            float s3 = float.Parse(Console.ReadLine());
+
+            student s = new student(Name, roll, s1, s2, s3);
+            s.Data();
+            Console.ReadLine();
+        }
+    }
+
+    class student
+    {
+        private string name;
+        private int roll;
+        private float mark1, mark2, mark3;
+        private char grade;
+        private float Percentage;
+
+        public student(String sname, int sroll, float m1, float m2, float m3)
+        {
+            this.name = sname;
+            this.roll = sroll;
+            this.mark1 = m1;
+            this.mark2 = m2;
+            this.mark3 = m3;
+            getPercentage();
+
+        }
+        public void getPercentage()
+        {
+            Percentage = (mark1 + mark2 + mark3) / 3;
+            
+            if (Percentage > 90)
+            {
+                grade = 'A';
+            }
+            else if (Percentage > 80)
+            {
+                grade = 'B';
+            }
+            else if (Percentage > 70)
+            {
+                grade = 'C';
+            }
+            else if (Percentage > 60)
+            {
+                grade = 'D';
+            }
+            else if (Percentage > 50)
+            {
+                grade = 'E';
+            }
+            else
+            {
+                grade = 'F';
+            }
+            
+        }
+        public void Data()
+        {
+            Console.Write("Your name = " + name + "\n Your RollNo = "+roll+"\n your Percentage is = " + Percentage + "\n Your Grade is = " + grade);
+        }
+
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------
+output
+------------------------------------------------------------------------------------------------------------------------------
+Enter The Student Name |SAVAN
+Enter The Student RollNo |20
+Enter The Student marks of subject 1 |70
+Enter The Student marks of subject 2 |60
+Enter The Student marks of subject 3 |80
+Your name = SAVAN
+ Your RollNo = 20
+ your Percentage is = 70
+ Your Grade is = D
+
